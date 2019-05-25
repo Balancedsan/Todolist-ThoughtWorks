@@ -1,0 +1,47 @@
+@mixin media-breakpoint($point) {
+  $xs: '(min-width: 576px)';
+  $sm: '(min-width: 768px)';
+  $md: '(min-width: 992px)';
+  $lg: '(min-width: 1200px)';
+
+  @if $point == xs {
+    @media #{$xs} {
+      @content;
+    }
+  } @else if $point == sm {
+    @media #{$sm} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$md} {
+      @content;
+    }
+  } @else if $point == lg {
+    @media #{$lg} {
+      @content;
+    }
+  }
+}
+
+@mixin flex-box($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradientColor() {
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My ToDoList</title>
+
+    <link rel="stylesheet" href="./public/stylesheets/vendor.css">
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="./public/stylesheets/main.css" />
+  </head>
+  <body class="is-family-monospace">
+    <section class="background"></section>
+    <section class="todo">
+      <h1 class="title is-size-1 has-text-white has-text-weight-semibold">My ToDoList</h1>
+      <h1 class="subtitle is-size-3 has-text-white has-text-centered">Press Enter or Add Button to Add Items</h1>
+      <h1 class="message has-text-danger"></h1>
+      <section class="addToDo">
+        <input class="input" type="text" placeholder="Enter Your Item" />
+        <button class="button is-danger addToDo__add">Add</button>
+      </section>
+      <button class="button is-primary remove">Remove All</button>
+      <ul class="list">
+      </ul>
+    </section>
+  </body>
+  <script type="module" src="./src/index.js"></script>
+</html>

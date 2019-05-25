@@ -1,0 +1,143 @@
+@keyframes moving {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+.remove, .addToDo__add {
+  width: 250px;
+  height: 48px;
+  margin-top: 1px;
+  box-shadow: 0 8px 6px -6px black;
+  outline: none;
+}
+
+html {
+  height: 100vh;
+  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)), url("https://source.unsplash.com/user/erondu/1600x900");
+  background-position: bottom left;
+  animation: moving 25s linear infinite;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100vh;
+}
+
+.input {
+  text-align: center;
+  cursor: pointer;
+}
+
+.todo {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addToDo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .addToDo {
+    flex-direction: row;
+  }
+}
+.addToDo input {
+  width: 250px;
+  height: 48px;
+}
+@media (min-width: 576px) {
+  .addToDo input {
+    max-height: 38px;
+  }
+}
+.addToDo__add {
+  box-shadow: 0 8px 6px -6px black;
+  outline: none;
+  transition: transform 0.5s ease-in-out;
+}
+@media (min-width: 576px) {
+  .addToDo__add {
+    margin: 2px;
+  }
+}
+@media (min-width: 768px) {
+  .addToDo__add {
+    max-width: 80px;
+    height: 38px;
+  }
+}
+.addToDo__add:active {
+  transform: translateY(4px);
+}
+
+.remove {
+  transition: transform 0.5s ease-in-out;
+}
+@media (min-width: 768px) {
+  .remove {
+    width: 330px;
+    height: 38px;
+  }
+}
+.remove:active {
+  transform: translateY(2px);
+}
+
+.list {
+  margin-top: 5px;
+  min-width: 250px;
+}
+@media (min-width: 768px) {
+  .list {
+    width: 330px;
+  }
+}
+.list__item {
+  position: relative;
+  cursor: pointer;
+  font-weight: bolder;
+  padding: 0;
+  overflow: hidden;
+  background: white;
+  height: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  user-select: none;
+}
+.list__item .fa-trash-alt {
+  box-shadow: 0 8px 6px -6px black;
+  position: absolute;
+  right: -50px;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.list__item .fa-trash-alt:active {
+  color: white;
+  transform: translateY(4px);
+}
+.list__item:hover {
+  background: #f2f2f2;
+}
+.list__item:hover .fa-trash-alt {
+  right: 10px;
+}
+
+path {
+  pointer-events: none;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=main.css.map */

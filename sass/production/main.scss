@@ -1,0 +1,141 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../abstracts/animations';
+@import '../../bulma/sass/utilities/initial-variables.sass';
+
+%button-mobile {
+  width: 250px;
+  height: 48px;
+  margin-top: 1px;
+  box-shadow: 0 8px 6px -6px black;
+  outline: none;
+}
+
+html {
+  height: 100vh;
+  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
+    url('https://source.unsplash.com/user/erondu/1600x900');
+  background-position: bottom left;
+  animation: moving 25s linear infinite;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100vh;
+}
+
+.input {
+  text-align: center;
+  cursor: pointer;
+}
+
+.todo {
+  margin-top: 4rem;
+  @include flex-box(column);
+}
+
+.addToDo {
+  @include flex-box(column);
+
+  @include media-breakpoint(sm) {
+    flex-direction: row;
+  }
+
+  input {
+    width: 250px;
+    height: 48px;
+    @include media-breakpoint(xs) {
+      max-height: 38px;
+    }
+  }
+
+  &__add {
+    @extend %button-mobile;
+    box-shadow: 0 8px 6px -6px black;
+    outline: none;
+    transition: transform 0.5s ease-in-out;
+
+    @include media-breakpoint(xs) {
+      margin: 2px;
+    }
+    @include media-breakpoint(sm) {
+      max-width: 80px;
+      height: 38px;
+    }
+
+    &:active {
+      transform: translateY(4px);
+    }
+  }
+}
+
+.remove {
+  @extend %button-mobile;
+  transition: transform 0.5s ease-in-out;
+  @include media-breakpoint(sm) {
+    width: 330px;
+    height: 38px;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.list {
+  margin-top: 5px;
+  min-width: 250px;
+
+  @include media-breakpoint(sm) {
+    width: 330px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 0;
+    overflow: hidden;
+    background: $white;
+    height: 100%;
+    padding: 0.5rem;
+    width: 100%;
+    user-select: none;
+
+
+    
+    .fa-trash-alt {
+      box-shadow: 0 8px 6px -6px black;
+      position: absolute;
+      right: -50px;
+      font-size: 1.5rem;
+      transition: all 0.5s ease-in-out;
+      &:active {
+        color:$white;
+        transform: translateY(4px);
+      }
+    }
+
+
+
+    &:hover {
+      background: darken($white, 5%);
+      .fa-trash-alt {
+        right: 10px;
+      }
+    }
+  }
+}
+
+
+// disable the path pointer event for the trash icon 
+path{
+    pointer-events: none;  
+}
+
+// add a line thru property
+.done {
+  text-decoration: line-through;
+}
+
