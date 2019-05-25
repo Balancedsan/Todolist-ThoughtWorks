@@ -20,7 +20,7 @@ html {
   overflow: hidden;
   background-repeat: no-repeat;
 
-  @include media-breakpoint(lg) {
+  @include media-breakpoint(vlg) {
       background-size: cover;
   }
 }

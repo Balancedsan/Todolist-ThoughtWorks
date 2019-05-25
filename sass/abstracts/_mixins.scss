@@ -3,7 +3,7 @@
   $sm: '(min-width: 768px)';
   $md: '(min-width: 992px)';
   $lg: '(min-width: 1200px)';
-
+  $vlg: '(min-width: 1601px)';
   @if $point == xs {
     @media #{$xs} {
       @content;
@@ -20,6 +20,10 @@
     @media #{$lg} {
       @content;
     }
+  } @else if $point == vlg {
+     @media #{$lg} {
+       @content;
+     }
   }
 }
 
