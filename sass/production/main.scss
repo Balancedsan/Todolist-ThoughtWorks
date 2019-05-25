@@ -18,8 +18,12 @@ html {
   background-position: bottom left;
   animation: moving 25s linear infinite;
   overflow: hidden;
-
   background-repeat: no-repeat;
+
+  @include media-breakpoint(lg) {
+      background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)),
+    url('https://source.unsplash.com/user/erondu/2000x1000');
+  }
 }
 
 body {
@@ -104,7 +108,7 @@ body {
     user-select: none;
 
 
-    
+
     .fa-trash-alt {
       box-shadow: 0 8px 6px -6px black;
       position: absolute;

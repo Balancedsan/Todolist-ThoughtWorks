@@ -22,6 +22,11 @@ html {
   overflow: hidden;
   background-repeat: no-repeat;
 }
+@media (min-width: 1200px) {
+  html {
+    background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)), url("https://source.unsplash.com/user/erondu/2000x1000");
+  }
+}
 
 body {
   height: 100vh;
