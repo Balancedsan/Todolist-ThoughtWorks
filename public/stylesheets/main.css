@@ -22,6 +22,11 @@ html {
   overflow: hidden;
   background-repeat: no-repeat;
 }
+@media (min-width: 1601px) {
+  html {
+    background-size: cover;
+  }
+}
 
 body {
   height: 100vh;
