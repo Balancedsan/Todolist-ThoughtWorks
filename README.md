@@ -2,6 +2,7 @@
 Instructions - Go to the project link below
 
 # Project Link
+https://balancedsan.github.io/ToDoList-ThoughtWorks/
 
 # ToDoList Basic Features
 
