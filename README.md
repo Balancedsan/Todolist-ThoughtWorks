@@ -1,8 +1,5 @@
 # TODOLIST Project ThoughtWorks JumpStart Assignment
-Instructions - Go to the project link below
-
-# Project Link
-https://balancedsan.github.io/ToDoList-ThoughtWorks/
+A simple TODOLIST project that adds and delete simple tasks , list of features are shown below
 
 # ToDoList Basic Features
 
